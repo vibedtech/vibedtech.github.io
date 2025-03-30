@@ -24,14 +24,12 @@ const initialProjects: Project[] = [
    { id: 'spellbound', title: 'Spellbound', description: 'Word puzzle game with scrambled letters.', tags: ['Puzzle', 'Language', 'Spelling'], category: 'Language'},
    { id: 'shape-shifter', title: 'Shape Shifter', description: 'Recognize and match shapes and colors.', tags: ['Game', 'Early Learning', 'Shapes'], category: 'Early Learning'},
    { id: 'fraction-frenzy', title: 'Fraction Frenzy', description: 'Puzzle game centered on fractions.', tags: ['Puzzle', 'Math', 'Fractions'], category: 'Math' },
-   // Add the rest of your app ideas here...
 ];
 
 function LandingPage() {
   const projects = initialProjects;
 
   return (
-    // Use default body background via theme or set explicitly like Container bg='gray.50'
     <Container maxW="container.xl" py={8}>
       <FilterBar />
       <Heading as="h2" size="lg" mb={6} color="gray.700">

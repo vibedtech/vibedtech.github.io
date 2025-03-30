@@ -45,8 +45,6 @@ function ProjectCard({ project }: ProjectCardProps) {
       }}
     >
       <AspectRatio ratio={16 / 9}>
-        {/* AspectRatio for the preview area */}
-        {/* If imageUrl is provided, use it as the background */}
         <Box
           bg="gray.50" // Background for the placeholder area
         >
