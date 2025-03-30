@@ -33,8 +33,6 @@ function LandingPage() {
     <Container maxW="container.xl" py={8}>
       <FilterBar />
       <Heading as="h2" size="lg" mb={6} color="gray.700">
-        {' '}
-        {/* Default dark gray */}
         Explore EdTech Apps
       </Heading>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={6}>

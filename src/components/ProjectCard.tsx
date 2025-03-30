@@ -9,6 +9,7 @@ import {
   Flex,
   LinkBox,
   LinkOverlay,
+  HStack,
 } from '@chakra-ui/react';
 import { LuExternalLink } from 'react-icons/lu';
 
@@ -60,7 +61,9 @@ function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveUrl || project.repoUrl}
             _hover={{ color: 'blue.600' }}
           >
-            {project.title} <LuExternalLink />
+            <HStack>
+              {project.title} <LuExternalLink />
+            </HStack>
           </LinkOverlay>
         </Heading>
         <Text fontSize="xs" color="gray.600" lineClamp={2}>

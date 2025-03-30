@@ -1,5 +1,5 @@
 // src/components/Header.tsx
-import { Box, Flex, Heading, Image, Link } from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, Image, Link } from '@chakra-ui/react';
 import { LuExternalLink } from 'react-icons/lu';
 
 function Header() {
@@ -24,7 +24,9 @@ function Header() {
             ml={4}
             _hover={{ color: 'white', textDecoration: 'underline' }} // Hover effect
           >
-            GitHub <LuExternalLink />
+            <HStack>
+              GitHub <LuExternalLink />
+            </HStack>
           </Link>
         </Flex>
       </Flex>
