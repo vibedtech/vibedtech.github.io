@@ -1,0 +1,42 @@
+name: Deploy VibEdTech Landing Page to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment on push to main branch
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push to gh-pages branch or update repo pages
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest # or specify a version
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build project
+        run: bun run build # This runs 'panda:prod' then 'vite build'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Directory Vite builds to
+          # By default, this action pushes to the 'gh-pages' branch.
+          # For an organization site (<org>.github.io), you often deploy
+          # the contents of 'dist' directly to the 'main' branch's root
+          # OR configure GitHub Pages to serve from the 'gh-pages' branch.
+          # Using a dedicated gh-pages branch is often cleaner:
+          publish_branch: gh-pages # Deploy to the gh-pages branch
+          # If deploying to main, you'd need different logic/action settings.
+          # Serving from gh-pages is recommended for project/org sites.
