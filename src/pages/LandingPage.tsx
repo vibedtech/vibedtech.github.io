@@ -23,7 +23,7 @@ const initialProjects: Project[] = [
     title: 'Math Blaster',
     description: 'Arithmetic challenges with falling numbers.',
     imageUrl:
-      'https://github.com/youvibe/math-blaster/blob/main/src/assets/mb-logo.png',
+      'https://raw.githubusercontent.com/youvibe/math-blaster/refs/heads/main/src/assets/mb-logo.png',
     tags: ['Game', 'Math', 'Arithmetic'],
     repoUrl: 'https://github.com/youvibe/math-blaster',
     liveUrl: 'https://youvibe.github.io/math-blaster/',
