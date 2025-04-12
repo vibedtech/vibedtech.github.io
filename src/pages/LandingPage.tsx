@@ -116,7 +116,7 @@ const initialProjects: Project[] = [
 ];
 
 function LandingPage() {
-  const projects = initialProjects;
+  // const projects = initialProjects;
 
   return (
     <Container maxW="container.xl" py={8}>
@@ -125,7 +125,7 @@ function LandingPage() {
         Explore EdTech Apps
       </Heading>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap={6}>
-        {projects.map((project) => (
+        {initialProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </SimpleGrid>

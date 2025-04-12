@@ -50,7 +50,20 @@ function ProjectCard({ project }: ProjectCardProps) {
           bg="gray.50" // Background for the placeholder area
         >
           <Text fontSize="sm" color="gray.500">
-            Preview Here
+            {project.imageUrl ? (
+              <img src={project.imageUrl} alt={project.title} />
+            ) : (
+              <Box
+                width="100%"
+                height="100%"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Text color="gray.400">No Preview Available</Text>
+              </Box>
+            )}
+            {/* Preview Here */}
           </Text>
         </Box>
       </AspectRatio>

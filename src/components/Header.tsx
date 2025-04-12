@@ -1,10 +1,10 @@
 // src/components/Header.tsx
-import { Box, Flex, Heading, HStack, Image, Link } from '@chakra-ui/react';
+import { Box, Flex, HStack, Image, Link } from '@chakra-ui/react';
 import { LuExternalLink } from 'react-icons/lu';
 
 function Header() {
   return (
-    <Box bg="blue.600" py={3} px={6} shadow="sm">
+    <Box bg="rgb(244, 223, 201)" py={3} px={6} shadow="sm">
       <Flex
         maxW="container.xl"
         mx="auto"
@@ -12,17 +12,18 @@ function Header() {
         justify="space-between"
       >
         <Flex align="center">
-          <Image src="/logo.png" alt="VibEdTech Logo" boxSize="40px" mr={3} />
-          <Heading as="h1" size="md" color="white">
-            VibEdTech
-          </Heading>
+          <Image src="/logo-alt.png" alt="VibEdTech Logo" boxSize="45px" mr={3} />
+
+          <Image src="/logo-text.png" alt="VibEdTech Logo" boxSize="40px" w={155}/>
         </Flex>
         <Flex>
           <Link
             href="https://github.com/vibedtech"
-            color="blue.100"
+            color="rgb(31, 21, 1)"
+            fontSize="lg"
+            fontWeight="bold"
             ml={4}
-            _hover={{ color: 'white', textDecoration: 'underline' }} // Hover effect
+            _hover={{ color: 'rgb(155, 35, 241)', textDecoration: 'underline' }} // Hover effect
           >
             <HStack>
               GitHub <LuExternalLink />

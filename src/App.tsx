@@ -9,7 +9,6 @@ function App() {
     <Box>
       <Header />
       <LandingPage />
-      {/* <Footer /> */}
     </Box>
   );
 }
